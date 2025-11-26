@@ -3,7 +3,7 @@
 @section('content')
 <div class="space-y-6">
     <div class="flex gap-6">
-
+        <!-- Left Section: Product Selection -->
         <div class="w-2/3 bg-white p-6 rounded-xl shadow-lg space-y-4">
             <div class="flex items-center justify-between">
                 <h2 class="text-xl font-bold text-gray-800">Pilih Produk</h2>
@@ -17,86 +17,121 @@
                 </div>
             </div>
 
-
+            <!-- Category Tabs -->
             <div class="flex gap-3">
                 <button class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 font-medium">
+                    Semua
+                </button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 font-medium">
                     Makanan
                 </button>
-                <button class="px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 font-medium">
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 font-medium">
                     Minuman
+                </button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 font-medium">
+                    Lainnya
                 </button>
             </div>
 
-            <div class="grid grid-cols-3 gap-4 max-h-96 overflow-y-auto pr-2">
-           
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Nasi Goreng</h3>
-                    <p class="text-sm text-gray-500">Stok: 50</p>
-                    <p class="text-xl font-bold text-blue-600 mt-3">Rp 20.000</p>
+            <!-- Product Grid -->
+            <div class="grid grid-cols-3 gap-4 max-h-[500px] overflow-y-auto pr-2">
+                <!-- Nasi Goreng -->
+                <div class="border-2 border-gray-200 rounded-xl cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white overflow-hidden">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=400&fit=crop" alt="Nasi Goreng" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 text-base mb-1">Nasi Goreng</h3>
+                        <p class="text-xs text-gray-500 mb-2">Stok: 50</p>
+                        <p class="text-lg font-bold text-blue-600">Rp 15.000</p>
+                    </div>
                 </div>
 
-         
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Mie Ayam</h3>
-                    <p class="text-sm text-gray-500">Stok: 30</p>
-                    <p class="text-xl font-bold text-blue-600 mt-3">Rp 18.000</p>
+                <!-- Mie Goreng -->
+                <div class="border-2 border-gray-200 rounded-xl cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white overflow-hidden">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop" alt="Mie Goreng" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 text-base mb-1">Mie Goreng</h3>
+                        <p class="text-xs text-gray-500 mb-2">Stok: 45</p>
+                        <p class="text-lg font-bold text-blue-600">Rp 15.000</p>
+                    </div>
+                </div>
+                <!-- Es Teh -->
+                <div class="border-2 border-gray-200 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white overflow-hidden">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=400&fit=crop" alt="Es Teh" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 text-base mb-1">Es Teh</h3>
+                        <p class="text-xs text-gray-500 mb-2">Stok: 100</p>
+                        <p class="text-lg font-bold text-yellow-600">Rp 5.000</p>
+                    </div>
                 </div>
 
-             
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Ayam Bakar</h3>
-                    <p class="text-sm text-gray-500">Stok: 25</p>
-                    <p class="text-xl font-bold text-blue-600 mt-3">Rp 25.000</p>
+                <!-- Jus Jeruk -->
+                <div class="border-2 border-gray-200 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white overflow-hidden">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=400&fit=crop" alt="Jus Jeruk" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 text-base mb-1">Jus Jeruk</h3>
+                        <p class="text-xs text-gray-500 mb-2">Stok: 80</p>
+                        <p class="text-lg font-bold text-yellow-600">Rp 8.000</p>
+                    </div>
                 </div>
 
-             
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Soto Ayam</h3>
-                    <p class="text-sm text-gray-500">Stok: 40</p>
-                    <p class="text-xl font-bold text-blue-600 mt-3">Rp 15.000</p>
+                <!-- Es Alpukat -->
+                <div class="border-2 border-gray-200 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white overflow-hidden">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400&h=400&fit=crop" alt="Es Alpukat" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 text-base mb-1">Es Alpukat</h3>
+                        <p class="text-xs text-gray-500 mb-2">Stok: 65</p>
+                        <p class="text-lg font-bold text-yellow-600">Rp 10.000</p>
+                    </div>
                 </div>
 
-              
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Kopi Susu</h3>
-                    <p class="text-sm text-gray-500">Stok: 100</p>
-                    <p class="text-xl font-bold text-yellow-600 mt-3">Rp 15.000</p>
+                <!-- Kopi -->
+                <div class="border-2 border-gray-200 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white overflow-hidden">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&h=400&fit=crop" alt="Kopi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 text-base mb-1">Kopi</h3>
+                        <p class="text-xs text-gray-500 mb-2">Stok: 90</p>
+                        <p class="text-lg font-bold text-yellow-600">Rp 8.000</p>
+                    </div>
                 </div>
 
-               
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Es Teh Manis</h3>
-                    <p class="text-sm text-gray-500">Stok: 80</p>
-                    <p class="text-xl font-bold text-yellow-600 mt-3">Rp 8.000</p>
-                </div>
-
-             
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Jus Jeruk</h3>
-                    <p class="text-sm text-gray-500">Stok: 60</p>
-                    <p class="text-xl font-bold text-yellow-600 mt-3">Rp 12.000</p>
-                </div>
-
-                
-                <div class="border-2 border-gray-200 p-4 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white">
-                    <h3 class="font-semibold text-gray-800 text-lg mb-2">Es Campur</h3>
-                    <p class="text-sm text-gray-500">Stok: 45</p>
-                    <p class="text-xl font-bold text-yellow-600 mt-3">Rp 10.000</p>
+                <!-- Susu Coklat -->
+                <div class="border-2 border-gray-200 rounded-xl cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white overflow-hidden">
+                    <div class="aspect-square bg-gray-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400&h=400&fit=crop" alt="Susu Coklat" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-800 text-base mb-1">Susu Coklat</h3>
+                        <p class="text-xs text-gray-500 mb-2">Stok: 75</p>
+                        <p class="text-lg font-bold text-yellow-600">Rp 12.000</p>
+                    </div>
                 </div>
             </div>
         </div>
 
- 
+        <!-- Right Section: Checkout -->
         <div class="w-1/3 bg-white p-6 rounded-xl shadow-lg flex flex-col">
-            <h2 class="text-xl font-bold text-gray-800 mb-6 text-center">Checkout</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-6 text-center">Transaksi</h2>
 
+            <!-- Table Header -->
             <div class="grid grid-cols-12 gap-2 mb-3 pb-2 border-b border-gray-200">
-                <div class="col-span-5 text-xs font-semibold text-gray-500 uppercase">Name</div>
+                <div class="col-span-5 text-xs font-semibold text-gray-500 uppercase">Nama</div>
                 <div class="col-span-4 text-xs font-semibold text-gray-500 uppercase text-center">QTY</div>
-                <div class="col-span-3 text-xs font-semibold text-gray-500 uppercase text-right">Price</div>
+                <div class="col-span-3 text-xs font-semibold text-gray-500 uppercase text-right">Harga</div>
             </div>
 
-
+            <!-- Cart Items -->
             <div class="flex-1 overflow-y-auto mb-4 space-y-3" style="max-height: 300px;">
                 <!-- Empty State -->
                 <div class="flex flex-col items-center justify-center h-full text-gray-400 py-8">
@@ -105,35 +140,9 @@
                     </svg>
                     <p class="font-medium text-sm">Belum ada item</p>
                 </div>
-
-                <!-- Example Item (hidden by default) -->
-                <!-- <div class="grid grid-cols-12 gap-2 items-center bg-gray-50 p-3 rounded-lg">
-                    <div class="col-span-1">
-                        <button class="text-gray-400 hover:text-red-500 transition">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="col-span-4">
-                        <p class="font-medium text-gray-800 text-sm">Nasi Goreng</p>
-                    </div>
-                    <div class="col-span-4 flex items-center justify-center space-x-2">
-                        <button class="w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center hover:bg-red-600 transition">
-                            <span class="text-sm">−</span>
-                        </button>
-                        <span class="font-semibold text-gray-800 w-8 text-center">2</span>
-                        <button class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition">
-                            <span class="text-sm">+</span>
-                        </button>
-                    </div>
-                    <div class="col-span-3 text-right">
-                        <p class="font-semibold text-gray-800 text-sm">$35.00</p>
-                    </div>
-                </div> -->
             </div>
 
-
+            <!-- Payment Summary -->
             <div class="space-y-3 pt-4 border-t-2 border-gray-200">
                 <div class="flex justify-between items-center">
                     <span class="text-gray-600">Discount (%)</span>
@@ -156,10 +165,10 @@
                 </div>
             </div>
 
-
+            <!-- Action Buttons -->
             <div class="space-y-3 mt-6">
                 <button class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
-                    <span>Pay (Rp 0)</span>
+                    <span>Proses Pembayaran</span>
                 </button>
 
                 <div class="grid grid-cols-2 gap-3">
